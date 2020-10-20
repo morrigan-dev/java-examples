@@ -21,6 +21,22 @@
 		<url>https://github.com/morrigan-dev/java-examples</url>
 		<tag>HEAD</tag>
 	</scm>
+	
+	<!-- Benötigt für den mvn deploy Vorgang benötigt, um die erzeugten Artefakte in das JFrog Artifactory zu deployen -->
+	<distributionManagement>
+		<repository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>central</id>
+			<name>morrigandev-artifactory-primary-0-releases</name>
+			<url>https://morrigandev.jfrog.io/artifactory/libs-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<uniqueVersion>true</uniqueVersion>
+			<id>snapshots</id>
+			<name>morrigandev-artifactory-primary-0-snapshots</name>
+			<url>https://morrigandev.jfrog.io/artifactory/libs-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>	
 
 	<!-- Release-Repo benötigt, um Parent-POM zu ziehen -->
 	<repositories>
