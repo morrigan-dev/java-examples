@@ -11,7 +11,7 @@
 #
 # Dieser Job wird bei jeder Änderung angestoßen.
 
-name: Multi-Module CI-Project - Run snapshot build-job
+name: MMCI-Project - Run snapshot build-job
 
 on:
   push:
