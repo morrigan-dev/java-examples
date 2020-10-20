@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>de.morrigan.dev.common</groupId>
 		<artifactId>parent-pom</artifactId>
-		<version>1.0.7-SNAPSHOT</version>
+		<version>1.0.7</version>
 	</parent>
 
 	<groupId>de.morrigan.dev.examples</groupId>
