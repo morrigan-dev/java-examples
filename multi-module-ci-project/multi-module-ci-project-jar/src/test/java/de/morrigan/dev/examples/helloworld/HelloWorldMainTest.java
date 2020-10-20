@@ -5,8 +5,6 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 import java.util.List;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.core.LogEvent;
@@ -32,13 +30,11 @@ public class HelloWorldMainTest {
 	@Before
 	public void setUp() {
 		appender.clear();
-		appender.countDownLatch = new CountDownLatch(1);
 	}
 
 	@Test
 	public void testMainStartsProgramm() throws Exception {
 		HelloWorldMain.main(null);
-		appender.countDownLatch.await(1, TimeUnit.SECONDS);
 
 		List<LogEvent> logEvents = appender.getEvents();
 		List<String> logMessages = logEvents.stream()

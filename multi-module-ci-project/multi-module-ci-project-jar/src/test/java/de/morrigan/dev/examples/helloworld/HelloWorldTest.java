@@ -11,8 +11,6 @@ import static org.junit.Assert.assertThat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.core.LogEvent;
@@ -23,14 +21,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class HelloWorldTest {
-
-	
-	/** Logger für Debugausgaben */
-	private static final Logger LOG = LoggerFactory.getLogger(HelloWorldTest.class);
 	
 	private static ListAppender appender;
 
@@ -49,7 +41,6 @@ public class HelloWorldTest {
 	public void setUp() {
 		sut = HelloWorld.Factory.create();
 		appender.clear();
-		appender.countDownLatch = new CountDownLatch(1);
 	}
 
 	@After
@@ -60,7 +51,6 @@ public class HelloWorldTest {
 	@Test
 	public void testPrintHelloWorldLogDifferentLevelSuccessfully() throws Exception {
 		sut.printHelloWorld();
-		appender.countDownLatch.await(1, TimeUnit.SECONDS);
 
 		List<LogEvent> logEvents = appender.getEvents();
 		Map<String, Integer> loglevels = new HashMap<String, Integer>();
