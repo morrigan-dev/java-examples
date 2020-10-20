@@ -9,7 +9,7 @@
 # - Benutzer des Artifactories in den Secrets unter ARTIFACTORY_USERNAME hinterlegt
 # - Token des Benutzers des Artifactories in den Secrets unter ARTIFACTORY_TOKEN hinterlegt
 #
-# Dieser Job wird bei jeder Änderung angestoßen.
+# Dieser Job wird bei jeder Änderung angestoßen
 
 name: MMCI-Project - Run snapshot build-job
 
