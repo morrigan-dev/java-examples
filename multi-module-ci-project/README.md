@@ -17,15 +17,15 @@
 In diesem Projekt wird demonstriert, wie mit Hilfe reiner Cloud Dienste ein kostenloser CI Entwicklungsprozess für open source Projekte und kleinen Entwicklerteams erstellt werden kann.
 Das Projekt dient als Vorlage für weitere Projekte und beinhaltet daher nur das techische Grundgerüst. Es gibt also keinen nennenswerten fachlichen Inhalt, den dieses Projekt bereitstellt.
 Das Projekt basiert auf folgenden Technologien:
-* GitHub (SCM)
-* GitHub actions (CI/CD Pipeline)
-* Sonarcloud (Quality Check)
-* JFrog Artifactory (Artefact Repository)
+* [GitHub](https://github.com/morrigan-dev) (als SCM)
+* [GitHub actions](https://docs.github.com/en/free-pro-team@latest/actions) (als CI/CD Pipeline)
+* [Sonarcloud.io](https://sonarcloud.io/organizations/morrigan-dev/projects) (als Quality Werkzeug)
+* [JFrog Artifactory](https://morrigandev.jfrog.io/ui/packages) (als Artefakt Repository)
 
 Folgende Frameworks/Plugins kommen zum Einsatz:
-* Apache Maven
-* Slf4j und log4j
-* JUnit
+* [Apache Maven](http://maven.apache.org/) (als Build & Dependency Werkzeug)
+* [Slf4j](http://www.slf4j.org/) und [log4j2](https://logging.apache.org/log4j/2.x/) (als Logging Framework)
+* [JUnit4](https://junit.org/junit4/) als Unit-Test Framework
 
 ## GitHub
 
@@ -50,9 +50,10 @@ Für die hier veröffentlichten Projekte wurde GitHub ausgewählt. Alternativ ka
 Auf Basis einer Versionskontrolle kann nun ein CI Entwicklungsprozess aufgesetzt werden. Sobald also Änderungen an den Sourcen getätigt werden, sollen diese compiliert und getestet werden. Auch hierfür bietet sich GitHub an, da es mit den GitHub actions einen integrierten CI/CD Mechanismus mitbringt.
 
 Bei diesem Beispielprojekt wird auf drei verschiedene Jobs gesetzt.
- # Ein Build-Job
- # Ein Quality-Job
- # Ein Release-Job
+* Ein Build-Job
+* Ein Quality-Job
+* Ein Release-Job
+
 Dabei hat jeder Job eine ganz spezifische Aufgabe.
 
 #### Build-Job
