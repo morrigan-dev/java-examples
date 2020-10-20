@@ -21,9 +21,15 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HelloWorldTest {
 
+	
+	/** Logger für Debugausgaben */
+	private static final Logger LOG = LoggerFactory.getLogger(HelloWorldTest.class);
+	
 	private static ListAppender appender;
 
 	@ClassRule
