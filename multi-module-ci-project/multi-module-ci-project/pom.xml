@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -40,4 +39,43 @@
 			</snapshots>
 		</repository>
 	</repositories>
+
+	<build>
+		<plugins>
+			<!-- Ermöglicht die Ablage von SNAPSHOT-Artefakten im JFrog Artifactory -->
+			<plugin>
+				<groupId>org.jfrog.buildinfo</groupId>
+				<artifactId>artifactory-maven-plugin</artifactId>
+				<version>${artifactory-maven-plugin.version}</version>
+				<inherited>true</inherited>
+				<executions>
+					<execution>
+						<id>build-info</id>
+						<goals>
+							<goal>publish</goal>
+						</goals>
+						<configuration>
+							<artifactory>
+								<includeEnvVars>true</includeEnvVars>
+								<envVarsExcludePatterns>*password*,*secret*,*key*,*token*,*passphrase*</envVarsExcludePatterns>
+								<timeoutSec>60</timeoutSec>
+							</artifactory>
+							<publisher>
+								<contextUrl>https://morrigandev.jfrog.io/artifactory</contextUrl>
+								<username>${ARTIFACTORY_USERNAME}</username>
+								<password>${ARTIFACTORY_TOKEN}</password>
+								<repoKey>libs-release-local</repoKey>
+								<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+							</publisher>
+							<buildInfo>
+								<buildName>multi-module-ci-project</buildName>
+								<buildNumber>1</buildNumber>
+								<buildUrl>https://github.com/morrigan-dev/java-examples/tree/main/multi-module-ci-project</buildUrl>
+							</buildInfo>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>
