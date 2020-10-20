@@ -8,7 +8,7 @@
 			<AppenderRef ref="List" />
 		</Logger>
 
-		<Root level="WARN">
+		<Root level="OFF">
 			<AppenderRef ref="List" />
 		</Root>
 	</Loggers>
