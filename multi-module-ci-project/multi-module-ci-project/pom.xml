@@ -22,22 +22,6 @@
 		<tag>HEAD</tag>
 	</scm>
 	
-	<!-- Benötigt für den mvn deploy Vorgang benötigt, um die erzeugten Artefakte in das JFrog Artifactory zu deployen -->
-	<distributionManagement>
-		<repository>
-			<uniqueVersion>false</uniqueVersion>
-			<id>central</id>
-			<name>morrigandev-artifactory-primary-0-releases</name>
-			<url>https://morrigandev.jfrog.io/artifactory/libs-release-local</url>
-		</repository>
-		<snapshotRepository>
-			<uniqueVersion>true</uniqueVersion>
-			<id>snapshots</id>
-			<name>morrigandev-artifactory-primary-0-snapshots</name>
-			<url>https://morrigandev.jfrog.io/artifactory/libs-snapshot-local</url>
-		</snapshotRepository>
-	</distributionManagement>	
-
 	<!-- Release-Repo benötigt, um Parent-POM zu ziehen -->
 	<repositories>
 		<repository>
@@ -55,43 +39,4 @@
 			</snapshots>
 		</repository>
 	</repositories>
-
-	<build>
-		<plugins>
-			<!-- Ermöglicht die Ablage von SNAPSHOT-Artefakten im JFrog Artifactory -->
-			<plugin>
-				<groupId>org.jfrog.buildinfo</groupId>
-				<artifactId>artifactory-maven-plugin</artifactId>
-				<version>${artifactory-maven-plugin.version}</version>
-				<inherited>true</inherited>
-				<executions>
-					<execution>
-						<id>build-info</id>
-						<goals>
-							<goal>publish</goal>
-						</goals>
-						<configuration>
-							<artifactory>
-								<includeEnvVars>true</includeEnvVars>
-								<envVarsExcludePatterns>*password*,*secret*,*key*,*token*,*passphrase*</envVarsExcludePatterns>
-								<timeoutSec>60</timeoutSec>
-							</artifactory>
-							<publisher>
-								<contextUrl>https://morrigandev.jfrog.io/artifactory</contextUrl>
-								<username>${ARTIFACTORY_USERNAME}</username>
-								<password>${ARTIFACTORY_TOKEN}</password>
-								<repoKey>libs-release-local</repoKey>
-								<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
-							</publisher>
-							<buildInfo>
-								<buildName>multi-module-ci-project</buildName>
-								<buildNumber>1</buildNumber>
-								<buildUrl>https://github.com/morrigan-dev/java-examples/tree/main/multi-module-ci-project</buildUrl>
-							</buildInfo>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 </project>
