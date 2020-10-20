@@ -16,12 +16,16 @@
 	<name>Build Modul</name>
 	<description>Grundgerüst für ein Multi-Modul Maven Projekt in einer CI/CD-Umgebung</description>
 
+	<modules>
+		<module>../multi-module-ci-project-jar</module>
+	</modules>
+
 	<scm>
 		<developerConnection>scm:git:https://github.com/morrigan-dev/java-examples.git</developerConnection>
 		<url>https://github.com/morrigan-dev/java-examples</url>
 		<tag>HEAD</tag>
 	</scm>
-	
+
 	<!-- Release-Repo benötigt, um Parent-POM zu ziehen -->
 	<repositories>
 		<repository>
