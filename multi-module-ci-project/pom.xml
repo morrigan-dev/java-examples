@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>de.morrigan.dev.common</groupId>
+		<artifactId>parent-pom</artifactId>
+		<version>1.0.7-SNAPSHOT</version>
+	</parent>
+
+	<groupId>de.morrigan.dev.examples</groupId>
+	<artifactId>multi-module-ci-project</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>Build Modul</name>
+	<description>Grundgerüst für ein Multi-Modul Maven Projekt in einer CI/CD-Umgebung</description>
+
+	<scm>
+		<developerConnection>scm:git:https://github.com/morrigan-dev/java-examples.git</developerConnection>
+		<url>https://github.com/morrigan-dev/java-examples</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<!-- Release-Repo benötigt, um Parent-POM zu ziehen -->
+	<repositories>
+		<repository>
+			<name>morrigan-dev releases</name>
+			<id>releases-repo</id>
+			<url>https://morrigandev.jfrog.io/artifactory/libs-release-local</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>
