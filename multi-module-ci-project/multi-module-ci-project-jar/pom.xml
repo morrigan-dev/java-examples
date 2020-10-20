@@ -7,6 +7,7 @@
 		<groupId>de.morrigan.dev.examples</groupId>
 		<artifactId>multi-module-ci-project</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../multi-module-ci-project/pom.xml</relativePath>
 	</parent>
 
 	<artifactId>multi-module-ci-project-jar</artifactId>
@@ -15,7 +16,7 @@
 	<name>JAR Modul</name>
 	<description>Ausführbares Jar Modul für dieses Beispiel</description>
 
-
+	<!-- Benötigt um den List-Appender beim Testen von Logausgaben nutzen zu können -->
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
