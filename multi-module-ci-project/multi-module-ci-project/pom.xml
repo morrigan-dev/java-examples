@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Build Modul</name>
+	<name>Multi-Module CI-Project Beispiel</name>
 	<description>Grundgerüst für ein Multi-Modul Maven Projekt in einer CI/CD-Umgebung</description>
 
 	<modules>
