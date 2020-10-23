@@ -26,6 +26,13 @@
 		<tag>HEAD</tag>
 	</scm>
 
+	<properties>
+		<!-- Für sonarcloud benötigte Properties -->
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.organization>morrigan-dev</sonar.organization>
+		<sonar.projectKey>morrigan-dev_java-examples</sonar.projectKey>
+	</properties>
+
 	<!-- Release-Repo benötigt, um Parent-POM zu ziehen -->
 	<repositories>
 		<repository>
