@@ -31,6 +31,8 @@
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.organization>morrigan-dev</sonar.organization>
 		<sonar.projectKey>morrigan-dev_java-examples</sonar.projectKey>
+		<!-- Lösung für ein StackOverflowError Problem (siehe: https://community.sonarsource.com/t/stackoverflowerror-at-defaultinputcomponent-equals/20324) -->
+		<sonar.moduleKey>${project.artifactId}</sonar.moduleKey>
 	</properties>
 
 	<!-- Release-Repo benötigt, um Parent-POM zu ziehen -->
