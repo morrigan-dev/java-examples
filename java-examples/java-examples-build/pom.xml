@@ -5,19 +5,19 @@
 	<parent>
 		<groupId>de.morrigan.dev.common</groupId>
 		<artifactId>parent-pom</artifactId>
-		<version>1.0.7</version>
+		<version>1.0.10-SNAPSHOT</version>
 	</parent>
 
 	<groupId>de.morrigan.dev.examples</groupId>
-	<artifactId>multi-module-ci-project</artifactId>
+	<artifactId>java-examples-build</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Multi-Module CI-Project Beispiel</name>
-	<description>Grundgerüst für ein Multi-Modul Maven Projekt in einer CI/CD-Umgebung</description>
+	<name>Java Beispiele (build)</name>
+	<description>Diverse Java Beispiele</description>
 
 	<modules>
-		<module>../multi-module-ci-project-jar</module>
+		<module>../java-examples-mina-sshd</module>
 	</modules>
 
 	<scm>

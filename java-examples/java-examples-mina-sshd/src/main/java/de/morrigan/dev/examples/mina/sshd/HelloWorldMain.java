@@ -1,4 +1,4 @@
-package de.morrigan.dev.examples.helloworld;
+package de.morrigan.dev.examples.mina.sshd;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

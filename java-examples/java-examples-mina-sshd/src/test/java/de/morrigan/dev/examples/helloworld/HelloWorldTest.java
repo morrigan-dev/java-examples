@@ -22,6 +22,8 @@ import org.junit.BeforeClass;
 import org.junit.ClassRule;
 import org.junit.Test;
 
+import de.morrigan.dev.examples.mina.sshd.HelloWorld;
+
 public class HelloWorldTest {
 	
 	private static ListAppender appender;
