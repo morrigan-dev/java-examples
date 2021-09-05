@@ -11,7 +11,7 @@
 #
 # Dieser Job wird bei jeder Änderung angestoßen
 
-name: Java-Examples - Run snapshot build-job
+name: Run snapshot build-job
 
 on:
   push:

@@ -9,7 +9,7 @@
 #
 # Dieser Job wird manuell oder einmal täglich in der Nacht angestoßen.
 
-name: Java-Examples - Run quality build-job
+name: Run quality build-job
 on: 
   schedule:
     - cron:  '0 1 * * *'
