@@ -38,4 +38,4 @@ jobs:
         env:
           ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
           ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
-        run: mvn -B deploy --file java-examples/pom.xml
+        run: mvn -B deploy --file pom.xml
