@@ -17,43 +17,16 @@ import org.apache.sshd.client.config.hosts.HostConfigEntryResolver;
 import org.apache.sshd.client.keyverifier.AcceptAllServerKeyVerifier;
 import org.apache.sshd.client.session.ClientSession;
 import org.apache.sshd.common.keyprovider.KeyIdentityProvider;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import de.morrigan.dev.examples.mina.sshd.SshConnection;
 import de.morrigan.dev.examples.mina.sshd.SshResponse;
 import de.morrigan.dev.examples.mina.sshd.SshTimeoutException;
 
-// TODO sshd mock und tests erstellen
+/**
+ * @author morrigan
+ * @see https://mina.apache.org/sshd-project/index.html
+ */
 public class Example1 {
-
-  /** Logger for debugging */
-  private static final Logger LOG = LoggerFactory.getLogger(Example1.class);
-
-  public static void main(String[] args) throws SshTimeoutException, IOException {
-    String username = args[0];
-    String password = args[1];
-    String host = args[2];
-    SshConnection conn = new SshConnection(username, password, host);
-    SshResponse response;
-
-    response = runSingleCommand(conn, "cd Bilder", 5);
-    LOG.info("returnCode: {}, errMsg: {}, stdOut: {}", response.getReturnCode(), response.getErrOutput(),
-        response.getStdOutput());
-    response = runSingleCommand(conn, "ls -la", 5);
-    LOG.info("returnCode: {}, errMsg: {}, stdOut: {}", response.getReturnCode(), response.getErrOutput(),
-        response.getStdOutput());
-
-    String[] commands = {
-        "cd scripts",
-        "ls -la",
-        "./setup.sh",
-        "echo \"$ROOT_DIR\""
-    };
-    response = runMultipleCommandsInSameSession(conn, commands, 10);
-    LOG.info("returnCode: {}, errMsg: {}, stdOut: {}", response.getReturnCode(), response.getErrOutput(),
-        response.getStdOutput());
-  }
 
   /**
    * Runs a SSH command against a remote system.
@@ -160,7 +133,7 @@ public class Example1 {
 
   private static ClientSession createClientSession(SshClient client, SshConnection conn, long timeout)
       throws IOException {
-    ClientSession session = client.connect(conn.getUsername(), conn.getHostname(), 22)
+    ClientSession session = client.connect(conn.getUsername(), conn.getHostname(), conn.getPort())
         .verify(TimeUnit.SECONDS.toMillis(timeout)).getSession();
     try {
       session.addPasswordIdentity(conn.getPassword());

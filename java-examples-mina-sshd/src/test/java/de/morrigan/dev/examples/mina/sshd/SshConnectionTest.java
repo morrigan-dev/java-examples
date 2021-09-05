@@ -8,10 +8,11 @@ public class SshConnectionTest {
 
   @Test
   public void testConstruction() {
-    SshConnection sut = new SshConnection("username", "password", "hostname");
+    SshConnection sut = new SshConnection("hostname", "username", "password", 42);
 
+    assertEquals("hostname", sut.getHostname());
     assertEquals("username", sut.getUsername());
     assertEquals("password", sut.getPassword());
-    assertEquals("hostname", sut.getHostname());
+    assertEquals(42, sut.getPort());
   }
 }

@@ -26,17 +26,18 @@
 ## Über dieses Projekt
 
 In diesem Projekt wird demonstriert, wie mit Hilfe reiner Cloud Dienste ein kostenloser CI Entwicklungsprozess für open source Projekte und kleinen Entwicklerteams erstellt werden kann.
-Das Projekt dient als Vorlage für weitere Projekte und beinhaltet daher nur das techische Grundgerüst. Es gibt also keinen nennenswerten fachlichen Inhalt, den dieses Projekt bereitstellt.
+Das Projekt dient als Vorlage für weitere Projekte und beinhaltet in den verschiedenen Modulen viele weitere hilfreiche Beispiele aus den verschiedensten Bereichen. So kann das Grundgerüst als Vorlage für weitere Projekte genutzt werden und auf die Beispiele je nach Bedarf zurückgegriffen werden.
 Das Projekt basiert auf folgenden Technologien:
 * [GitHub](https://github.com/morrigan-dev) (als SCM)
 * [GitHub actions](https://docs.github.com/en/free-pro-team@latest/actions) (als CI/CD Pipeline)
 * [Sonarcloud.io](https://sonarcloud.io/organizations/morrigan-dev/projects) (als Quality Werkzeug)
 * [JFrog Artifactory](https://morrigan.jfrog.io/ui/packages) (als Artefakt Repository)
 
-Folgende Frameworks/Plugins kommen zum Einsatz:
+Folgende grundlegenden Frameworks/Plugins kommen zum Einsatz:
 * [Apache Maven](http://maven.apache.org/) (als Build & Dependency Werkzeug)
 * [Slf4j](http://www.slf4j.org/) und [log4j2](https://logging.apache.org/log4j/2.x/) (als Logging Framework)
 * [JUnit4](https://junit.org/junit4/) als Unit-Test Framework
+* [JaCoCo](https://www.eclemma.org/jacoco/) als Coverage Tool
 
 ## GitHub
 
