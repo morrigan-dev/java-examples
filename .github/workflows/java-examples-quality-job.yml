@@ -9,7 +9,7 @@
 #
 # Dieser Job wird manuell oder einmal täglich in der Nacht angestoßen.
 
-name: MMCI-Project - Run quality build-job
+name: Java-Examples - Run quality build-job
 on: 
   schedule:
     - cron:  '0 1 * * *'
@@ -76,7 +76,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          cd multi-module-ci-project/multi-module-ci-project/
+          cd java-examples/
           mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
       - name: No analyse necessary
         if: env.LAST_COMMIT > 0

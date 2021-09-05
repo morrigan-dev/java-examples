@@ -11,7 +11,7 @@
 #
 # Dieser Job wird bei jeder Änderung angestoßen
 
-name: MMCI-Project - Run snapshot build-job
+name: Java-Examples - Run snapshot build-job
 
 on:
   push:
@@ -37,4 +37,4 @@ jobs:
         env:
           ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
           ARTIFACTORY_TOKEN: ${{ secrets.ARTIFACTORY_TOKEN }}
-        run: mvn -B deploy --file multi-module-ci-project/multi-module-ci-project/pom.xml
+        run: mvn -B deploy --file java-examples/pom.xml
