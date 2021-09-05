@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>de.morrigan.dev.common</groupId>
 		<artifactId>parent-pom</artifactId>
-		<version>1.0.10-SNAPSHOT</version>
+		<version>1.0.10</version>
 	</parent>
 
 	<groupId>de.morrigan.dev.examples</groupId>
@@ -17,7 +17,8 @@
 	<description>Diverse Java Beispiele</description>
 
 	<modules>
-		<module>../java-examples-mina-sshd</module>
+		<module>java-examples-mina-sshd</module>
+		<module>java-examples-testing</module>
 	</modules>
 
 	<scm>
@@ -34,22 +35,17 @@
 		<!-- Lösung für ein StackOverflowError Problem (siehe: https://community.sonarsource.com/t/stackoverflowerror-at-defaultinputcomponent-equals/20324) -->
 		<sonar.moduleKey>${project.artifactId}</sonar.moduleKey>
 	</properties>
-
-	<!-- Release-Repo benötigt, um Parent-POM zu ziehen -->
-	<repositories>
-		<repository>
-			<name>morrigan-dev releases</name>
-			<id>releases-repo</id>
-			<url>https://morrigandev.jfrog.io/artifactory/libs-release-local</url>
-			<layout>default</layout>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>never</updatePolicy>
-				<checksumPolicy>fail</checksumPolicy>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
+	
+	<dependencyManagement>
+		<dependencies>		
+			<!-- log4j-core: Benötigt um den List-Appender beim Testen von Logausgaben nutzen zu können -->
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${log4j-core.version}</version>
+				<type>test-jar</type>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>	
 </project>

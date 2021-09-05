@@ -6,7 +6,6 @@
 		<groupId>de.morrigan.dev.examples</groupId>
 		<artifactId>java-examples-build</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../java-examples-build/pom.xml</relativePath>
 	</parent>
 
 	<artifactId>java-examples-mina-sshd</artifactId>
@@ -15,45 +14,37 @@
 	<name>Apache Mina SSHD Beispiel</name>
 	<description>Apache Mina SSHD Beispiel</description>
 
-	<dependencies>
+	<properties>
+		<!-- Modul spezifische Abhängigkeiten -->
+		<eddsa.version>0.3.0</eddsa.version>
+		<sshd-core.version>2.7.0</sshd-core.version>
+	</properties>
 
-		<!-- sshd-core: SSH Bibliothek -->
+	<dependencyManagement>
+		<dependencies>
+			<!-- sshd-core: SSH Bibliothek -->
+			<dependency>
+				<groupId>org.apache.sshd</groupId>
+				<artifactId>sshd-core</artifactId>
+				<version>${sshd-core.version}</version>
+			</dependency>
+			<!-- eddsa: Needed for ssh connections based on EdDSA -->
+			<dependency>
+				<groupId>net.i2p.crypto</groupId>
+				<artifactId>eddsa</artifactId>
+				<version>${eddsa.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
 		<dependency>
 			<groupId>org.apache.sshd</groupId>
 			<artifactId>sshd-core</artifactId>
-			<version>2.7.0</version>
 		</dependency>
-		<!-- eddsa: Needed for ssh connections based on EdDSA -->
 		<dependency>
 			<groupId>net.i2p.crypto</groupId>
 			<artifactId>eddsa</artifactId>
-			<version>0.3.0</version>
-		</dependency>
-
-
-		<!-- Benötigt um den List-Appender beim Testen von Logausgaben nutzen zu können -->
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.13.3</version>
-			<type>test-jar</type>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M5</version>
-				<configuration>
-					<!-- FIXME: Der Log4j List Appender ist nicht Thread safe. Dadurch können aktuell die Tests nicht parallel ausgeführt 
-						werden. Siehe auch: https://medium.com/@BillyKorando/how-to-test-logging-in-java-part-two-parallel-boogaloo-28d563c15a3d -->
-					<forkCount>1</forkCount>
-					<reuseForks>false</reuseForks>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 </project>
