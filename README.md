@@ -1,15 +1,16 @@
 <p align="center">
- <img src="https://raw.githubusercontent.com/morrigan-dev/java-examples/images/Multi-Modul CI Projekt Grundgesrüst.png">
+ <img src="https://raw.githubusercontent.com/morrigan-dev/java-examples/images/Java-Examples.png">
 </p>
 
 <p align="center">
     <a href="https://github.com/morrigan-dev/java-examples/actions/workflows/build-job.yml" title="Last Commit"><img src="https://img.shields.io/github/workflow/status/morrigan-dev/java-examples/Run%20snapshot%20build-job?logo=GitHub&style=plastic"></a>
-    <a https://github.com/morrigan-dev/java-examples/actions/workflows/quality-job.yml" title="Last Commit"><img src="https://img.shields.io/github/workflow/status/morrigan-dev/java-examples/Run%20quality%20build-job?label=quality-build&logo=GitHub&style=plastic"></a>
-    <a https://sonarcloud.io/dashboard?id=morrigan-dev_java-examples" title="Last Commit"><img src="https://img.shields.io/sonar/quality_gate/morrigan-dev_java-examples?logo=SonarCloud&server=https%3A%2F%2Fsonarcloud.io&style=plastic"></a>
-    <a https://sonarcloud.io/dashboard?id=morrigan-dev_java-examples" title="Last Commit"><img src="https://img.shields.io/sonar/test_success_density/morrigan-dev_java-examples?logo=SonarCloud&server=https%3A%2F%2Fsonarcloud.io&style=plastic"></a>
-    <a https://sonarcloud.io/dashboard?id=morrigan-dev_java-examples" title="Last Commit"><img src="https://img.shields.io/sonar/coverage/morrigan-dev_java-examples?logo=SonarCloud&server=https%3A%2F%2Fsonarcloud.io&style=plastic"></a>
-    <a https://github.com/morrigan-dev/java-examples/blob/main/LICENSE" title="Last Commit"><img src="https://img.shields.io/github/license/morrigan-dev/java-examples?logo=GitHub&style=plastic"></a>
-    <a https://github.com/morrigan-dev/java-examples" title="Last Commit"><img src="https://img.shields.io/github/last-commit/morrigan-dev/java-examples?logo=GitHub&style=plastic"></a>
+    <a href="https://github.com/morrigan-dev/java-examples/actions/workflows/quality-job.yml" title="Last Commit"><img src="https://img.shields.io/github/workflow/status/morrigan-dev/java-examples/Run%20quality%20build-job?label=quality-build&logo=GitHub&style=plastic"></a>
+    <a href="https://github.com/morrigan-dev/java-examples/blob/main/LICENSE" title="Last Commit"><img src="https://img.shields.io/github/license/morrigan-dev/java-examples?logo=GitHub&style=plastic"></a>
+    <a href="https://github.com/morrigan-dev/java-examples" title="Last Commit"><img src="https://img.shields.io/github/last-commit/morrigan-dev/java-examples?logo=GitHub&style=plastic"></a>
+	<br>    
+    <a href="https://sonarcloud.io/dashboard?id=morrigan-dev_java-examples" title="Last Commit"><img src="https://img.shields.io/sonar/quality_gate/morrigan-dev_java-examples?logo=SonarCloud&server=https%3A%2F%2Fsonarcloud.io&style=plastic"></a>
+    <a href="https://sonarcloud.io/dashboard?id=morrigan-dev_java-examples" title="Last Commit"><img src="https://img.shields.io/sonar/test_success_density/morrigan-dev_java-examples?logo=SonarCloud&server=https%3A%2F%2Fsonarcloud.io&style=plastic"></a>
+    <a href="https://sonarcloud.io/dashboard?id=morrigan-dev_java-examples" title="Last Commit"><img src="https://img.shields.io/sonar/coverage/morrigan-dev_java-examples?logo=SonarCloud&server=https%3A%2F%2Fsonarcloud.io&style=plastic"></a>
 </p>
 
 <hr />
