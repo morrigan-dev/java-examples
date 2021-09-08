@@ -1,5 +1,5 @@
 <p align="center">
- <img src="https://github.com/morrigan-dev/java-examples/blob/main/images/Java-Examples.png">
+ <img src="https://raw.githubusercontent.com/morrigan-dev/java-examples/main/images/Java-Examples.png">
 </p>
 
 <p align="center">
@@ -19,7 +19,8 @@
     <a href="#github">GitHub</a> • 
     <a href="#sonarcloud">Sonarcloud</a> • 
     <a href="#jfrog-artifactory">JFrog Artifactory</a> • 
-    <a href="#fazit">Fazit</a>
+    <a href="#fazit">Fazit</a> •
+    <a href="#lizenzierung">Lizenzierung</a>
 </p>
 <hr />
 
@@ -96,3 +97,16 @@ Somit schließt sich der Kreis des Continuous Integration Prozesses, bei dem Anw
 Dieses Projekt dient als Vorlage eines möglichen CI Prozesses mit den aufgeführten Werkzeugen. Es gibt mit Sicherheit viele andere Möglichkeiten. Ich habe mich für meine Projekte für diesen entschieden und nutze diese Vorlage auch für mich selbst für alle künftigen Projekte.
 
 Es ist häufig schwierig aus großen Projekten die Aspekte zu identifizieren, die für bestimmte Zwecke benötigt werden. Daher ist das Vorgehen einmal zentral hier in diesem Beispiel-Projekt dokumentiert.
+
+## Lizenzierung
+
+Copyright (c) 2020 Thomas Gattinger.
+
+Lizenziert unter **Apache-Lizenz, Version 2.0** (die "Lizenz"). Sie dürfen diese Datei ausschließlich im Einklang mit 
+der Lizenz verwenden.
+
+Eine Kopie der Lizenz erhalten Sie unter https://www.apache.org/licenses/LICENSE-2.0.
+
+Sofern nicht durch anwendbares Recht gefordert oder schriftlich vereinbart, wird jede unter der Lizenz bereitgestellte 
+Software „OHNE MÄNGELGEWÄHR“ UND OHNE AUSDRÜCKLICHE ODER STILLSCHWEIGENDE GARANTIE JEGLICHER ART bereitgestellt. 
+Die genauen Angaben zu Genehmigungen und Einschränkungen unter der Lizenz finden Sie in der [LIZENZ](LICENSE).
